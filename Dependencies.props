@@ -1,0 +1,39 @@
+﻿<Project InitialTargets="ValidateGamePath">
+    <Import Project="$(MSBuildThisFileDirectory)\GameFolder.props" Condition="Exists('$(MSBuildThisFileDirectory)\GameFolder.props')" />
+
+    <Target Name="ValidateGamePath">
+        <Error Text="The GameFolder property must be set to the GTFO game folder." Condition="'$(GameFolder)' == '' or !Exists('$(GameFolder)')" />
+    </Target>
+
+	<PropertyGroup>
+		<BIELibsFolder>$(GameFolder)\BepInEx\core</BIELibsFolder>
+		<CorLibsFolder>$(GameFolder)\dotnet</CorLibsFolder>
+		<InteropLibsFolder>$(GameFolder)\BepInEx\interop</InteropLibsFolder>
+		<PluginsFolder>$(GameFolder)\BepInEx\plugins</PluginsFolder>
+	</PropertyGroup>
+
+
+	<!-- Assemblies -->
+	<ItemGroup>
+		<!-- BepInEx -->
+		<Reference Include="$(BIELibsFolder)\BepInEx.*.dll" Private="false" />
+		<Reference Include="$(BIELibsFolder)\0Harmony.dll" Private="false" />
+		<Reference Include="$(BIELibsFolder)\MonoMod.RuntimeDetour.dll" Private="false" />
+		<Reference Include="$(BIELibsFolder)\Il2CppInterop.*.dll" Private="false" />
+		<Reference Include="$(BIELibsFolder)\SemanticVersioning.dll" Private="false" />
+
+		<!-- CoreCLR -->
+		<Reference Include="$(CorLibsFolder)\*.dll" Private="false" />
+		<Reference Include="$(CorLibsFolder)\..\System.Private.CoreLib.dll" Private="false" />
+
+		<!-- Interop -->
+		<Reference Include="$(InteropLibsFolder)/*.dll" Private="false" />
+		<Reference Remove="$(InteropLibsFolder)/netstandard.dll" />
+		<Reference Remove="$(InteropLibsFolder)/Newtonsoft.Json.dll" />
+		<Reference Remove="$(InteropLibsFolder)/mscorlib.dll" />
+
+		<!-- Plugins -->
+		<!-- <Reference Include="$(PluginsFolder)\GTFO-API.dll" Private="false" /> -->
+		<!-- <Reference Include="$(PluginsFolder)\Localia-LocaliaCore\LocaliaCore.dll" Private="false" /> -->
+	</ItemGroup>
+</Project>

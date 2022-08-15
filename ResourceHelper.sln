@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ResourceHelper", "ResourceHelper.csproj", "{6ACC7EB8-4F81-48E4-BF87-44903E2E3CC8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6ACC7EB8-4F81-48E4-BF87-44903E2E3CC8}.Debug|x64.ActiveCfg = Debug|x64
+		{6ACC7EB8-4F81-48E4-BF87-44903E2E3CC8}.Debug|x64.Build.0 = Debug|x64
+		{6ACC7EB8-4F81-48E4-BF87-44903E2E3CC8}.Release|x64.ActiveCfg = Release|x64
+		{6ACC7EB8-4F81-48E4-BF87-44903E2E3CC8}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {80358988-F5DD-4F6C-A055-714ED5985158}
+	EndGlobalSection
+EndGlobal
