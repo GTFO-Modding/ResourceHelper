@@ -24,16 +24,19 @@
 
 		<!-- CoreCLR -->
 		<Reference Include="$(CorLibsFolder)\*.dll" Private="false" />
-		<Reference Include="$(CorLibsFolder)\..\System.Private.CoreLib.dll" Private="false" />
-
+		<Reference Include="$(CorLibsFolder)\System.*.dll" Private="false" />
+		<Reference Include="$(CorLibsFolder)\netstandard.dll" Private="false" />
+		<Reference Include="$(CorLibsFolder)\mscorlib.dll" Private="false" />
+		<Reference Remove="$(CorLibsFolder)\System.IO.Compression.Native.dll" />
+		
 		<!-- Interop -->
 		<Reference Include="$(InteropLibsFolder)/*.dll" Private="false" />
 		<Reference Remove="$(InteropLibsFolder)/netstandard.dll" />
 		<Reference Remove="$(InteropLibsFolder)/Newtonsoft.Json.dll" />
-		<Reference Remove="$(InteropLibsFolder)/mscorlib.dll" />
+	
 
 		<!-- Plugins -->
-		<!-- <Reference Include="$(PluginsFolder)\GTFO-API.dll" Private="false" /> -->
+		<Reference Include="$(PluginsFolder)\GTFO-API.dll" Private="false" />
 		<!-- <Reference Include="$(PluginsFolder)\Localia-LocaliaCore\LocaliaCore.dll" Private="false" /> -->
 	</ItemGroup>
 </Project>

@@ -1,5 +1,5 @@
 ﻿using System;
-using BepInEx.IL2CPP;
+using BepInEx.Unity.IL2CPP;
 using BepInEx;
 using HarmonyLib;
 using UnityEngine.Analytics;
@@ -12,7 +12,7 @@ using System.IO;
 
 namespace ResourceHelper
 {
-	[BepInPlugin("Localia.ResourceHelper", "ResourceHelper", "2.0.2")]
+	[BepInPlugin("Localia.ResourceHelper", "ResourceHelper", "3.0.0")]
 	[BepInDependency("com.dak.MTFO", BepInDependency.DependencyFlags.SoftDependency)]
 
 
